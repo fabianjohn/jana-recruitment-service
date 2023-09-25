@@ -1,0 +1,131 @@
+@charset "ISO-8859-1";
+/*HEAD MENU*/
+.home_menu{
+	width: 100%;
+	padding: 20px;
+	background-color:MediumSeaGreen;
+	text-align: right;
+	display: flex;
+	flex-direction: row;	
+}
+
+.home_menu:hover{
+	background-color: LightGray;
+	color: black;
+	padding: 5px;
+}
+
+.home_menu a{
+	margin: 10px;
+	font-size: 14px;
+	text-decoration: none;
+	right: 0px;
+	color: white;	
+	font-weight: bold
+}
+.home_menu a:hover{
+	background-color: LightGray;
+	color: black;
+	padding: 5px;		
+}
+
+.dropbtn:hover{
+	background-color: LightGray;
+	color: black;
+	padding: 5px;		
+}
+.dropbtn{
+	background-color:MediumSeaGreen;
+	color:white;
+	border: none;
+	font-weight: bold
+}
+
+
+.home_menu .menu{
+	float: right;
+}
+
+.body_middle:hover{
+	background-color: LightGray;
+	color: black;
+	padding: 5px;	
+	
+}
+
+/*dropdown menu*/
+
+  
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: LightGray;
+  min-width: 560px;
+  min-height: 700px;
+  box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  float: left;
+}
+
+.dropdown-content a:hover {background-color: none; width: auto;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/*SOCIAL MEDIA*/
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}

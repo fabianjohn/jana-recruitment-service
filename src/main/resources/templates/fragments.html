@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" >
+<head th:fragment="html_head">
+<meta charset="UTF-8">
+<title>[[${pageTitle}]]  Jona Agency</title>
+<link rel="stylesheet" type="text/css" th:href="@{/styles.css}" />
+</head>
+<body>
+<!-- Header div -->
+<div th:fragment="header" class="home_menu">
+		<div style="text-align: center">
+		 <img src="/images/LOGO JA.jpg"style="width:50px; height: 50px"></img>
+		 <h2><i><R style="color:blue">J</R>ona  <l style="color:red">R</l>ecruitment  <e style="color:white">S</e>ervices</i></h2>
+		</div>
+		<div class="menu_bar" style="margin-left: 20%">
+		
+		 <a th:href="@{/}">Home</a>
+		  <div class="dropdown">
+  			<button class="dropbtn" >Services</button>
+  				<div class="dropdown-content" style="min-width: 170px; min-height: auto">
+      				<h4 style="text-align: left"><b>Work for us</b></h4>
+    					<a href="https://pay.squadco.com/KHESKA">Staff Recruitment</a>
+    					<a href="#">Staff Management</a>
+    					<a href="#">Staff Training</a>
+    					<a href="#"></a>
+  					</div>
+</div>
+		 
+		 <a href="#">Vacancies</a>
+		 <a href="#">About Us</a>
+		 <a href="#">Contact Us</a>
+		 
+		</div>
+      
+          <div class="menu_log" style="margin-left: 10%" >
+               <th:block sec:authorize="isAuthenticated()">
+                  Hello
+              <!--         <a th:href="@{/admin/accountInfo}" th:utext="${#request.userPrincipal.name}">..</a> -->
+              &nbsp;|&nbsp;
+                <a th:href="@{/admin/logout}">Logout</a>
+               </th:block>
+      				<th:block >
+            			<a th:href="@{/user/signUp}">SignUp</a>
+        				</th:block> 
+              			<th:block >
+            		<a th:href="@{/admin/login}">Login</a>
+        		</th:block> 
+   			</div>
+</div>
+		
+		<!-- SECOND DIV -->
+		<div th:fragment="third_div" class="body_middle" style="display: flex; flex-direction: row; text-align: center">
+		      <div style="width: 800px; height: 150px">
+		       <h1>We do the Background Checks</h1>
+
+</div>
+		  <div>
+		 <img alt="" src="/images/OIP.jpeg" style="width: 350px; height: 100%; margin-left: 50%">
+		 
+</div>
+		
+		</div>
+<!-- google map -->
+   		<div th:fragment="google" class="google_map" style="margin-top: 2%" >
+   		
+   		<div id="googleMap" style="width:100%;height:400px;"></div>
+
+	<script>
+		function myMap() {
+		var mapProp= {
+  		center:new google.maps.LatLng(6.5244,-3.3792),
+  		zoom:5,
+};
+		var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+	}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
+
+
+   		
+   		
+</div>
+
+
+
+   		<div th:fragment="footer" class="foot" style="background-color: black; display:flex; flex-direction: row; width: 100%">
+   		
+   		<div class="social_m">
+   		<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-linkedin"></a>
+			<a href="#" class="fa fa-instagram"></a>
+   		</div>
+   		
+</div>
+
+</body>
+</html>
